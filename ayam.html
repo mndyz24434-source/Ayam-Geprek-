@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayam Geprek Juara - Pedasnya Nagih!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary-color: #d00000; 
+            --secondary-color: #ffba08; 
+            --dark-color: #1a1a1a;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0,0,0,0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed; /* Efek Parallax */
+            height: 100vh; 
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            text-align: center;
+        }
+
+        .hero h1 { font-weight: 800; font-size: 4rem; text-transform: uppercase; }
+        .hero span { color: var(--secondary-color); }
+
+        /* Card Menu */
+        .menu-card {
+            border: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-15px);
+            shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .menu-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .price-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .feature-box {
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .feature-box i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Button Custom */
+        .btn-order {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            padding: 15px 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: var(--secondary-color);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">GEPREK<span style="color: var(--secondary-color);">JUARA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-content="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-1">Pedasnya <br><span>Bikin Juara!</span></h1>
+            <p class="fs-4 mb-5">Dibuat dengan cabai pilihan dan ayam segar setiap hari.</p>
+            <a href="https://wa.me/628123456789" class="btn btn-order btn-lg">Pesan Lewat WhatsApp <i class="fab fa-whatsapp ms-2"></i></a>
+        </div>
+    </header>
+
+    <section id="tentang" class="py-5">
+        <div class="container my-5 text-center">
+            <h2 class="section-title">Mengapa Harus Kami?</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="feature-box shadow-sm">
+                        <i class="fas fa-pepper-hot"></i>
+                        <h4>Cabai Segar</h4>
+                        <p class="text-muted">Kami hanya menggunakan cabai rawit segar yang diulek langsung secara dadakan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box shadow-sm">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Ayam Higienis</h4>
+                        <p class="text-muted">Daging ayam pilihan dengan bumbu rahasia yang meresap hingga ke tulang.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box shadow-sm">
+                        <i class="fas fa-motorcycle"></i>
+                        <h4>Cepat Sampai</h4>
+                        <p class="text-muted">Layanan pengiriman yang cepat untuk memastikan ayam tetap krispi di tangan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5 py-5" id="menu">
+        <h2 class="text-center section-title">Menu Andalan</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow menu-card">
+                    <img src="https://images.unsplash.com/photo-1562607374-060156340337?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Geprek Original">
+                    <div class="card-body text-center p-4">
+                        <h4 class="fw-bold">Geprek Original</h4>
+                        <p class="text-muted small">Sambal Bawang + Nasi Hangat + Lalapan</p>
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <span class="price-badge">Rp 15.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow menu-card">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Geprek Mozzarella">
+                    <div class="card-body text-center p-4">
+                        <h4 class="fw-bold">Geprek Mozzarella</h4>
+                        <p class="text-muted small">Ayam Krispi dengan topping keju lumer melimpah</p>
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <span class="price-badge">Rp 25.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow menu-card">
+                    <img src="https://images.unsplash.com/photo-1585238341267-1cfec2046a55?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Paket Hemat">
+                    <div class="card-body text-center p-4">
+                        <h4 class="fw-bold">Geprek Matah</h4>
+                        <p class="text-muted small">Sensasi segar Sambal Matah khas Bali di atas ayam krispi</p>
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <span class="price-badge">Rp 18.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-dark text-white pt-5 pb-3">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-4">Mampir Yuk!</h3>
+            <p><i class="fas fa-map-marker-alt me-2 text-warning"></i> Jl. Cabai Pedas No. 45, Jakarta Selatan</p>
+            <p><i class="fas fa-phone me-2 text-warning"></i> +62 812 3456 789</p>
+            <div class="mt-4">
+                <a href="#" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white fs-4"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <p class="small opacity-50">&copy; 2024 Ayam Geprek Juara. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
